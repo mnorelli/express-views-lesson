@@ -1,16 +1,15 @@
-<h1>
-  <a href=""> Candy Shoppe</a>
-</h1>
+  <h1>
+    <a href="">Candy Shoppe</a>
+  </h1>
 
-<hr>
-<div class="container">
-  <% for(var i=0; i<candies.length; i++) { %>
+  <hr>
+  <div class="container">
+  <% for(var i=0; i< candies.length; i++) {  %>
     <ul>
-      <li><b>Name:</b> <%- link_to(candies[i].name, './candies/' + candies[i]._id') %></li>
-      <li><b>Candy:</b> <%= candies[i].color %></li>
-      <li>
+      <li><b>Name : </b> <%- link_to(candies[i].name, '/candies/' + candies[i]._id) %></li>
+      <li><b>Color : </b> <%= candies[i].color %></li>
     </ul>
   <% } %>
-</div>
+  </div>
 
-<% include ./candy/form %>
+  <% include ./candy/form %>
