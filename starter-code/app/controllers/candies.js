@@ -12,7 +12,12 @@ function getAll(req, res){
 
 // POST
 function createCandy(req, res){
-  console.log('hello');
+  // console.log(res.body);
+  Candy.create({name:res.body.name,color:res.body.color},function(err, candy){
+    if (err) res.json({message:"Could not create candy"+err})
+    console.log("created" + candy.name)
+    // res.redirect('/candy')
+  })
 }
 
 // GET
